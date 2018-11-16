@@ -1,4 +1,4 @@
-import Image from "../../models/Image.js";
+import Image from "../../models/image.js";
 
 const url = '//bcw-getter.herokuapp.com/?url=';
 const url2 = 'http://www.splashbase.co/api/v1/images/'

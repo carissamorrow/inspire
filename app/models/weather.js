@@ -1,5 +1,6 @@
 export default class weather {
-  constructor() {
-    //not sure what to put here yet
+  constructor(data) {
+    //not sure what to put here yet//maybe what's below?
+    this.temp = data.temp
   }
 }
