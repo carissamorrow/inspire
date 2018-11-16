@@ -1,7 +1,5 @@
 import TodoService from "./todo-service.js";
 
-
-
 var todoService = new TodoService
 
 // Use this getTodos function as your callback for all other edits
@@ -11,16 +9,20 @@ function getTodos() {
 }
 
 function draw(todos) {
-	//WHAT IS MY PURPOSE?
-	//BUILD YOUR TODO TEMPLATE HERE
-	var template = ''
-	//DONT FORGET TO LOOP
+	let template = `<div>totalTodos: ${todos.length}</div>`
+	todos.forEach(todo => {
+		//template for each todo
+		template += `
+	 
+	 `
+	})
+
 }
 
 
 export default class TodoController {
 	constructor() {
-		// IF YOU WANT YOUR TODO LIST TO DRAW WHEN THE PAGE FIRST LOADS WHAT SHOULD YOU CALL HERE???
+		getTodos()
 	}
 	// You will need four methods
 	// getTodos should request your api/todos and give an array of todos to your callback fn
@@ -42,19 +44,14 @@ export default class TodoController {
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 		//YOU SHOULDN'T NEED TO CHANGE THIS
 		todoService.addTodo(todo, getTodos)
-		//^^^^^^^ EXAMPLE OF HOW TO GET YOUR TOODOS AFTER AN EDIT
 	}
 
 	toggleTodoStatus(todoId) {
-		// asks the service to edit the todo status
 		todoService.toggleTodoStatus(todoId, getTodos)
-		// YEP THATS IT FOR ME
 	}
 
 	removeTodo(todoId) {
-		// ask the service to run the remove todo with this id
-
-		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
+		todoService.removeTodo(todoId, getTodos)
 	}
 
 
