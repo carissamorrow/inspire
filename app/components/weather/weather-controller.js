@@ -2,8 +2,10 @@ import WeatherService from "./weather-service.js";
 
 var weatherService = new WeatherService()
 
+
+
 function draw(weatherData) {
-	document.getElementById('weather').innerHTML = `${(weatherData.temp)}`
+	document.getElementById('weather').innerHTML = `${weatherData}degrees`
 }
 
 export default class WeatherController {
@@ -11,10 +13,4 @@ export default class WeatherController {
 		weatherService.getWeather(draw)
 	}
 
-	// getWeather() {
-	// 	weatherService.getWeather(weather => {
-	// 		console.log(weather);
-	// 		//What can you do with this weather object?
-	// 	})
-	// }
 }

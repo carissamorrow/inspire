@@ -2,7 +2,7 @@ export default class image {
   constructor(data) {
     this.url = data.url
   }
-  get imageUrl() {
+  get imagesUrl() {
     return `
     <div class="col">
         <div class="card" style="width: 18rem;">

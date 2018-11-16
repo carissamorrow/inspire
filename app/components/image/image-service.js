@@ -12,12 +12,16 @@ const imgApi = axios.create({
 	timeout: 3000
 });
 
+
 export default class ImageService {
 	getImage(callWhenDone) {
 
-		imgApi.get(`search?query=mountains`)
+		imgApi.get(``)
 			.then(res => {
-				callWhenDone(res.data.Image)
+				console.log(res)
+				//randomly choose an image from res.data.images
+				let image = res.data.images[Math.floor((Math.random() * res.data.images.length) - 1)]
+				callWhenDone(image)
 			})
 	}
 }

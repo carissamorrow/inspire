@@ -7,5 +7,21 @@ body {
     background-position: center;
 }
 .text {
-    color: black
+    color: white; 
+    text-shadow: 2px 2px 10px black;
+}
+#body {
+    background-size: cover;
+    background-repeat: no-repeat;
+   height: 100vh
+}
+#weather {
+   position: absolute;
+   margin-left: 999px;
+   font-size: 30px
+}
+.currentWeather {
+    position: absolute;
+    margin-left: 700px;
+    font-style: italic;
 }
