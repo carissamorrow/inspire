@@ -7,9 +7,7 @@ function draw(weatherData) {
 }
 
 export default class WeatherController {
-
 	constructor() {
-		//this will fire off get weather right away
 		weatherService.getWeather(draw)
 	}
 

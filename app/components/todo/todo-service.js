@@ -1,7 +1,8 @@
 
 
+// @ts-ignore
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/Carissa/todos/',
 	timeout: 3000
 });
 

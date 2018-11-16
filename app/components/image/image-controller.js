@@ -5,7 +5,14 @@ let imageService = new ImageService()
 
 
 function draw(image) {
-  document.body.style.backgroundImage = `url(${image.url})`;
+  let template = ""
+  template += `
+    <style>
+        body {background-image: url("${image.url}");
+        background-size: cover;}
+    </style>
+    `
+  document.getElementById('body').innerHTML = template
 }
 
 export default class ImageController {

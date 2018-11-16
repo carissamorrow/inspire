@@ -1,7 +1,8 @@
-import Image from "../../models/image.js";
+import Image from "../../models/image.js"
+
 
 const url = '//bcw-getter.herokuapp.com/?url=';
-const url2 = 'http://www.splashbase.co/api/v1/images/'
+const url2 = 'http://www.splashbase.co/api/v1/images/search?query=mountains'
 const apiUrl = url + encodeURIComponent(url2);
 
 
@@ -14,7 +15,7 @@ const imgApi = axios.create({
 export default class ImageService {
 	getImage(callWhenDone) {
 
-		imgApi.get(`search?query=river`)
+		imgApi.get(`search?query=mountains`)
 			.then(res => {
 				callWhenDone(res.data.Image)
 			})
