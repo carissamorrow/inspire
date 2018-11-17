@@ -1,4 +1,4 @@
-import Image from "../../models/image.js"
+import image from "../../models/image.js"
 
 
 const url = '//bcw-getter.herokuapp.com/?url=';
