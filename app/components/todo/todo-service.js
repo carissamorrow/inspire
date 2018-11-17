@@ -44,7 +44,7 @@ export default class TodoService {
 			//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 			.then(function (res) {
 				getTodos()
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
+
 			})
 			.catch(logError)
 	}
