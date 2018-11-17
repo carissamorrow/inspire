@@ -18,7 +18,6 @@ export default class QuoteService {
 	getQuote(callWhenDone) {
 		console.log('looking for some good quotes')
 		quoteApi().then((res) => {
-			let Quote = new quote(res.data)
 			callWhenDone(res.data.quote)
 		})
 	}
