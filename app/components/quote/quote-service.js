@@ -1,4 +1,4 @@
-import quote from "../../models/quote.js"
+
 
 let url = '//bcw-getter.herokuapp.com/?url=';
 let url2 = 'https://favqs.com/api/qotd';
