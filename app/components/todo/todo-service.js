@@ -1,4 +1,4 @@
-import todo from "../../models/todo.js";
+// import todo from "../../models/todo.js";
 
 // @ts-ignore
 const todoApi = axios.create({
@@ -25,7 +25,6 @@ export default class TodoService {
 	}
 
 	addTodo(todo, getTodos) {
-		// WHAT IS THIS FOR???
 		todoApi.post('', todo)
 			.then(function (res) {
 				getTodos()
@@ -36,12 +35,9 @@ export default class TodoService {
 
 	toggleTodoStatus(todoId, getTodos) {
 		var todo = todoList.find(i => i._id == todoId)
-		todo.complete = !todo.complete
+		todo.completed = !todo.completed
 		todoApi.put(todoId, todo)
 
-			// MAKE SURE WE THINK THIS ONE THROUGH
-			//STEP 1: Find the todo by its index **HINT** todoList
-			//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 			.then(function (res) {
 				getTodos()
 
