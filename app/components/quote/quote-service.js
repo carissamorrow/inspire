@@ -20,5 +20,8 @@ export default class QuoteService {
 		quoteApi().then((res) => {
 			callWhenDone(res.data.quote)
 		})
+		//tried this and it turns quote to undefined but does turn import active
+		//	let Quote = new quote(res.data.quote)
+		//callWhenDone(Quote)
 	}
 }
