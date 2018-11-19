@@ -13,8 +13,8 @@ function draw(todos) {
 	todos.forEach(todo => {
 		template += `
 	 <div>
-				<input checkbox type="checkbox" ${todo.completed ? "checked" : ''} onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')" />
-				<p>${todo.description}</p>
+				<input checkbox class="box" type="checkbox" ${todo.completed ? "checked" : ''} onchange="app.controllers.todoController.toggleTodoStatus('${todo._id}')" <h5>Check Box If Completed</h5>
+				<p>To Do: ${todo.description}</p>
 				<button type="button" onclick="app.controllers.todoController.removeTodo('${todo._id}')">Delete</button>
 				</div>
 	 `
